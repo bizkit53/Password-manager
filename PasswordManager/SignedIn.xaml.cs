@@ -27,5 +27,12 @@ namespace PasswordManager
             this.users = users;
             InitializeComponent();
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow(users);
+            main.Show();
+            this.Close();
+        }
     }
 }
