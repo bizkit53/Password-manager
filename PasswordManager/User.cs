@@ -8,6 +8,7 @@ using System.Windows;
 
 namespace PasswordManager
 {
+    [Serializable]
     public class User
     {
         private string login;
@@ -35,7 +36,7 @@ namespace PasswordManager
             else
                 MessageBox.Show("Choose stronger password!");
 
-            return null;
+            return "";
         }
 
         private bool passwordStrength(string password)

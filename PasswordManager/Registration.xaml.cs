@@ -17,6 +17,8 @@ namespace PasswordManager
     /// <summary>
     /// Interaction logic for Registration.xaml
     /// </summary>
+
+    [Serializable]
     public partial class Registration : Window
     {
         UserList users;
@@ -31,13 +33,17 @@ namespace PasswordManager
         {
             User newUser = new User();
 
-            if(users.CheckIfLoginExist(textBox_login.Text) == false)
+            if (users.CheckIfLoginExist(textBox_login.Text) == false)
+            {
                 newUser.Login = textBox_login.Text;
 
-            if (passwordBox_password.Password.ToString() == passwordBox_repeatPassword.Password.ToString())
-                newUser.Password = passwordBox_password.Password.ToString();
+                if (passwordBox_password.Password.ToString() == passwordBox_repeatPassword.Password.ToString())
+                    newUser.Password = passwordBox_password.Password.ToString();
+                else
+                    MessageBox.Show("Passwords are different!");
+            }
             else
-                MessageBox.Show("Passwords are different!");
+                MessageBox.Show("User " + textBox_login.Text + " already exists!");
 
             if (newUser.Login != "" && newUser.Password != "")
             {

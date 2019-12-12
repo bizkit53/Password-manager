@@ -17,6 +17,7 @@ namespace PasswordManager
     /// <summary>
     /// Interaction logic for SignedIn.xaml
     /// </summary>
+    [Serializable]
     public partial class SignedIn : Window
     {
         UserList users;

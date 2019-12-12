@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PasswordManager
 {
+    [Serializable] 
     public enum categories { None, Business, Email, Finance, Games, Health, Productivity, Shopping, Social }
 
     public class Record

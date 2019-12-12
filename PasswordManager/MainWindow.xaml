@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="Password Manager" Height="450" Width="600">
     <Grid>
+        <DockPanel Grid.ColumnSpan="2">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open" Click="MenuOpen_Click"/>
+                    <MenuItem Header="_Save" Click="MenuSave_Click"/>
+                    <MenuItem Header="_Close" Click="MenuClose_Click"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
+        
         <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="215,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
         <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Height="23" Margin="215,176,0,0" VerticalAlignment="Top" Width="300"/>
         <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="88,89,0,0" VerticalAlignment="Top"/>

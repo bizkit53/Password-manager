@@ -8,6 +8,7 @@ using System.Xml.Serialization;
 
 namespace PasswordManager
 {
+    [Serializable]
     public class UserList
     {
         private List<User> users;

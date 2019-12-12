@@ -18,6 +18,7 @@ namespace PasswordManager
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    [Serializable]
     public partial class MainWindow : Window
     {
         UserList users;
@@ -50,6 +51,33 @@ namespace PasswordManager
             Registration registration = new Registration(users);
             registration.Show();
             this.Close();
+        }
+
+        private void MenuOpen_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                this.users = UserList.ReadXML(filename);
+            }
+        }
+
+        private void MenuSave_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                UserList.SaveXML(filename, users);
+            }
+        }
+
+        private void MenuClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
