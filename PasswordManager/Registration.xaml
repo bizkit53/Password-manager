@@ -1,0 +1,22 @@
+﻿<Window x:Class="PasswordManager.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordManager"
+        mc:Ignorable="d"
+        Title="Registration" Height="450" Width="419.288">
+    <Grid>
+        <Label x:Name="label_registration" Content="Registration" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="14,109,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="14,172,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_repeatPassword" Content="Repeat password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,231,0,0"/>
+        <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="136,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Margin="136,172,0,0" VerticalAlignment="Top" Width="179"/>
+        <PasswordBox x:Name="passwordBox_repeatPassword" HorizontalAlignment="Left" Margin="136,239,0,0" VerticalAlignment="Top" Width="179"/>
+        <Button x:Name="button_register" Click="button_register_Click" Content="Register" HorizontalAlignment="Left" Margin="98,345,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_cancel" Click="button_cancel_Click" Content="Cancel" HorizontalAlignment="Left" Margin="240,345,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+    </Grid>
+</Window>
