@@ -36,6 +36,7 @@ namespace PasswordManager
             if (textBox_serviceName.Text != "" && textBox_login.Text != "" && textBox_password.Text != "" && comboBox_category.SelectedItem != null)
             {
                 user.AddRecord(textBox_serviceName.Text, textBox_login.Text, textBox_password.Text, textBox_URL.Text, (categories)comboBox_category.SelectedIndex);
+                MessageBox.Show("Record successfully added.");
                 SignedIn signedIn = new SignedIn(users, user);
                 signedIn.Show();
                 this.Close();

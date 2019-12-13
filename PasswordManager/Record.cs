@@ -42,6 +42,11 @@ namespace PasswordManager
             this.category = category;
         }
 
+        public override string ToString()
+        {
+            return serviceName;
+        }
+
         public string ServiceName { get => serviceName; set => serviceName = value; }
         public string Login { get => login; set => login = value; }
         public string Password { get => password; set => password = value; }

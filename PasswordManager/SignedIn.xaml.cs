@@ -23,12 +23,15 @@ namespace PasswordManager
     {
         UserList users;
         User user;
+        ObservableCollection<Record> list;
 
         public SignedIn(UserList users, User user)
         {
             this.users = users;
             this.user = user;
             InitializeComponent();
+            list = new ObservableCollection<Record>(user.Records);
+            listBox_records.ItemsSource = list;
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -43,6 +46,22 @@ namespace PasswordManager
             AddRecord add = new AddRecord(users, user);
             add.Show();
             this.Close();
+        }
+
+        private void button_delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox_records.SelectedItem != null)
+            {
+                MessageBoxResult result = MessageBox.Show("Do you really want to delete " + listBox_records.SelectedItem.ToString(), "Delete record", MessageBoxButton.YesNo);
+                
+                if (result == MessageBoxResult.Yes)
+                {
+                    Record record = (Record)listBox_records.SelectedItem;
+                    user.DeleteRecord(record);
+                    list.Remove(record);
+                }
+            }
+
         }
     }
 }

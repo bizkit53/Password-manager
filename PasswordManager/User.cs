@@ -13,7 +13,7 @@ namespace PasswordManager
     {
         private string login;
         private string password;
-        List<Record> records;
+        private List<Record> records;
 
         public User()
         {
@@ -64,8 +64,13 @@ namespace PasswordManager
             records.Add(newRecord);
         }
 
+        public void DeleteRecord(Record record)
+        {
+            records.Remove(record);
+        }
+
         public string Login { get => login; set => login = value; }
         public string Password { get => password; set => password = setPassword(value); }
-        public List<Record> GetRecords() { return this.records; }
+        public List<Record> Records { get => records; set => records = value; }
     }
 }
