@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,12 @@ namespace PasswordManager
     public partial class SignedIn : Window
     {
         UserList users;
+        User user;
 
-        public SignedIn(UserList users)
+        public SignedIn(UserList users, User user)
         {
             this.users = users;
+            this.user = user;
             InitializeComponent();
         }
 
@@ -32,6 +35,13 @@ namespace PasswordManager
         {
             MainWindow main = new MainWindow(users);
             main.Show();
+            this.Close();
+        }
+
+        private void button_add_Click(object sender, RoutedEventArgs e)
+        {
+            AddRecord add = new AddRecord(users, user);
+            add.Show();
             this.Close();
         }
     }

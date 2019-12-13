@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="Password Manager" Height="450" Width="800">
+        Title="Password Manager" Height="450" Width="600">
     <Grid>
         <DockPanel Grid.ColumnSpan="2">
             <Menu DockPanel.Dock="Top">
@@ -13,5 +13,15 @@
             </Menu>
             <StackPanel></StackPanel>
         </DockPanel>
+        <ListBox x:Name="listBox_records" HorizontalAlignment="Left" Height="397" Margin="140,22,0,0" VerticalAlignment="Top" Width="452"/>
+        <Button x:Name="button_show"  Content="Show" HorizontalAlignment="Left" Margin="30,130,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_edit" Content="Edit" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_delete" Content="Delete" HorizontalAlignment="Left" Margin="30,280,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+
+
+
     </Grid>
 </Window>

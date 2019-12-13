@@ -26,7 +26,7 @@ namespace PasswordManager
             this.category = categories.None;
         }
 
-        public Record(string serviceName, string login, string password)
+        public Record(string serviceName, string login, string password) : base()
         {
             this.serviceName = serviceName;
             this.login = login;

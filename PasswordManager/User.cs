@@ -58,7 +58,14 @@ namespace PasswordManager
                 return false;
         }
 
+        public void AddRecord(string serviceName, string login, string password, string serviceURL, categories category)
+        {
+            Record newRecord = new Record(serviceName, login, password, serviceURL, category);
+            records.Add(newRecord);
+        }
+
         public string Login { get => login; set => login = value; }
         public string Password { get => password; set => password = setPassword(value); }
+        public List<Record> GetRecords() { return this.records; }
     }
 }

@@ -38,8 +38,6 @@ namespace PasswordManager
 
             return false;
         }
-
-
         
         public static void SaveXML(string path, UserList users)
         {

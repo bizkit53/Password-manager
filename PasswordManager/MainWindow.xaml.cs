@@ -36,7 +36,7 @@ namespace PasswordManager
                 if (textBox_login.Text == user.Login)
                     if (passwordBox_password.Password.ToString() == user.Password)
                     {
-                        SignedIn signedIn = new SignedIn(users);
+                        SignedIn signedIn = new SignedIn(users, user);
                         signedIn.Show();
                         this.Close();
                     }
