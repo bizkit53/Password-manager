@@ -29,6 +29,18 @@ namespace PasswordManager
             InitializeComponent();
         }
 
+        /*public AddRecord(UserList users, User user, Record record)    // edit record
+        {
+            this.users = users;
+            this.user = user;
+            InitializeComponent();
+            textBox_serviceName.Text = record.ServiceName;
+            textBox_login.Text = record.Login;
+            textBox_password.Text = record.Password;
+            textBox_URL.Text = record.ServiceURL;
+            comboBox_category.SelectedItem = record.Category;
+        }*/
+
         private void button_apply_Click(object sender, RoutedEventArgs e)
         {
             /*categories p = (categories)comboBox_category.SelectedIndex;

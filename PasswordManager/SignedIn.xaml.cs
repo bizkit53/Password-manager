@@ -61,7 +61,20 @@ namespace PasswordManager
                     list.Remove(record);
                 }
             }
+        }
 
+        private void button_edit_Click(object sender, RoutedEventArgs e)
+        {
+            /*AddRecord edit = new AddRecord(users, user, (Record)listBox_records.SelectedItem);
+            edit.Show();
+            this.Close();*/
+        }
+
+        private void button_show_Click(object sender, RoutedEventArgs e)
+        {
+            ShowRecord edit = new ShowRecord(users, user, (Record)listBox_records.SelectedItem);
+            edit.Show();
+            this.Close();
         }
     }
 }

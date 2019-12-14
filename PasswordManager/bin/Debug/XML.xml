@@ -4,6 +4,15 @@
     <User>
       <Login>admin</Login>
       <Password>Admin123</Password>
+      <Records>
+        <Record>
+          <ServiceName>onetwo</ServiceName>
+          <Login>onetwo@three.com</Login>
+          <Password>Hello13</Password>
+          <ServiceURL>onetwo.com</ServiceURL>
+          <Category>Email</Category>
+        </Record>
+      </Records>
     </User>
   </Users>
 </UserList>
