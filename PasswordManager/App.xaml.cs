@@ -19,10 +19,13 @@ namespace PasswordManager
         public static void Main()
         {
             UserList users = new UserList();
-
+            string filename = "data.xml";
             var application = new App();
+
+           if (File.Exists(filename))
+                users = UserList.ReadXML(filename);
+
             MainWindow window = new MainWindow(users);
-           // application.InitializeComponent();
             application.Run(window);
         }
     }
