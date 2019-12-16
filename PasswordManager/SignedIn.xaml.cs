@@ -75,9 +75,35 @@ namespace PasswordManager
 
         private void button_show_Click(object sender, RoutedEventArgs e)
         {
-            ShowRecord edit = new ShowRecord(users, user, (Record)listBox_records.SelectedItem);
-            edit.Show();
-            this.Close();
+            if (listBox_records.SelectedItem != null)
+            {
+                ShowRecord edit = new ShowRecord(users, user, (Record)listBox_records.SelectedItem);
+                edit.Show();
+                this.Close();
+            }
+        }
+
+        private void button_filterCategory_Click(object sender, RoutedEventArgs e)
+        {
+            if (comboBox_category.SelectedItem != null && comboBox_category.SelectedIndex != comboBox_category.Items.Count -1)
+            {
+                list.Clear();
+                foreach (Record record in user.Records)
+                {
+                    if (comboBox_category.SelectedIndex == (int)record.Category)
+                        list.Add(record);
+                }
+                listBox_records.Items.Refresh();
+            }
+            else
+            {
+                list.Clear();
+                foreach (Record record in user.Records)
+                {
+                    list.Add(record);
+                }
+                listBox_records.Items.Refresh();
+            }
         }
     }
 }

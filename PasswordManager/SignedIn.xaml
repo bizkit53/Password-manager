@@ -14,9 +14,24 @@
             <StackPanel></StackPanel>
         </DockPanel>
         <ListBox x:Name="listBox_records" HorizontalAlignment="Left" Height="397" Margin="140,22,0,0" VerticalAlignment="Top" Width="452"/>
-        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,130,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_edit" Click="button_edit_Click" Content="Edit" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="30,280,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_edit" Click="button_edit_Click" Content="Edit" HorizontalAlignment="Left" Margin="30,280,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="30,330,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <ComboBox x:Name="comboBox_category" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="119" >
+            <ComboBoxItem x:Name="None">None</ComboBoxItem>
+            <ComboBoxItem x:Name="Business">Business</ComboBoxItem>
+            <ComboBoxItem x:Name="Email">Email</ComboBoxItem>
+            <ComboBoxItem x:Name="Finance">Finance</ComboBoxItem>
+            <ComboBoxItem x:Name="Games">Games</ComboBoxItem>
+            <ComboBoxItem x:Name="Health">Health</ComboBoxItem>
+            <ComboBoxItem x:Name="Productivity">Productivity</ComboBoxItem>
+            <ComboBoxItem x:Name="Shopping">Shopping</ComboBoxItem>
+            <ComboBoxItem x:Name="Social">Social</ComboBoxItem>
+            <ComboBoxItem x:Name="All" Background="GreenYellow">All</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="button_filterCategory" Click="button_filterCategory_Click" Content="Filter category" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="119"/>
+
     </Grid>
 </Window>
