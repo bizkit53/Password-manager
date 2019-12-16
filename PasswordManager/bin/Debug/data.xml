@@ -6,11 +6,32 @@
       <Password>Admin123</Password>
       <Records>
         <Record>
-          <ServiceName>onetwo</ServiceName>
+          <ServiceName>OneTwo</ServiceName>
           <Login>onetwo@three.com</Login>
           <Password>Hello13</Password>
           <ServiceURL>onetwo.com</ServiceURL>
           <Category>Email</Category>
+        </Record>
+        <Record>
+          <ServiceName>Reddit</ServiceName>
+          <Login>snowman</Login>
+          <Password>MadaGaScar75</Password>
+          <ServiceURL>reddit.com</ServiceURL>
+          <Category>Social</Category>
+        </Record>
+        <Record>
+          <ServiceName>ProLife</ServiceName>
+          <Login>digma</Login>
+          <Password>apple13Pie</Password>
+          <ServiceURL>prolife.com</ServiceURL>
+          <Category>Health</Category>
+        </Record>
+        <Record>
+          <ServiceName>High Traffic</ServiceName>
+          <Login>mosquito</Login>
+          <Password>MrJack03</Password>
+          <ServiceURL />
+          <Category>Games</Category>
         </Record>
       </Records>
     </User>

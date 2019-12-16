@@ -15,26 +15,38 @@ using System.Windows.Shapes;
 namespace PasswordManager
 {
     /// <summary>
-    /// Interaction logic for AddRecord.xaml
+    /// Interaction logic for EditRecord.xaml
     /// </summary>
-    public partial class AddRecord : Window
+    public partial class EditRecord : Window
     {
         UserList users;
         User user;
+        Record record;
 
-        public AddRecord(UserList users, User user)
+        public EditRecord(UserList users, User user, Record record)
         {
             this.users = users;
             this.user = user;
+            this.record = record;
             InitializeComponent();
+            textBox_serviceName.Text = record.ServiceName;
+            textBox_login.Text = record.Login;
+            textBox_password.Text = record.Password;
+            textBox_URL.Text = record.ServiceURL;
+            comboBox_category.SelectedIndex = (int)record.Category;
         }
 
         private void button_apply_Click(object sender, RoutedEventArgs e)
         {
             if (textBox_serviceName.Text != "" && textBox_login.Text != "" && textBox_password.Text != "" && comboBox_category.SelectedItem != null)
             {
-                user.AddRecord(textBox_serviceName.Text, textBox_login.Text, textBox_password.Text, textBox_URL.Text, (categories)comboBox_category.SelectedIndex);
-                MessageBox.Show("Record successfully added.");
+                record.ServiceName = textBox_serviceName.Text;
+                record.Login = textBox_login.Text;
+                record.Password = textBox_password.Text;
+                record.ServiceURL = textBox_URL.Text;
+                record.Category = (categories)comboBox_category.SelectedIndex;
+                MessageBox.Show("Record successfully edited.");
+
                 SignedIn signedIn = new SignedIn(users, user);
                 signedIn.Show();
                 this.Close();

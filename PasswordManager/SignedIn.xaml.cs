@@ -65,9 +65,12 @@ namespace PasswordManager
 
         private void button_edit_Click(object sender, RoutedEventArgs e)
         {
-            /*AddRecord edit = new AddRecord(users, user, (Record)listBox_records.SelectedItem);
-            edit.Show();
-            this.Close();*/
+            if (listBox_records.SelectedItem != null)
+            {
+                EditRecord edit = new EditRecord(users, user, (Record)listBox_records.SelectedItem);
+                edit.Show();
+                this.Close();
+            }
         }
 
         private void button_show_Click(object sender, RoutedEventArgs e)
