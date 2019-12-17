@@ -4,6 +4,8 @@ Password manager with graphic user interface
 
 On startup (if XML file exists), it loads the data from file "data.xml".
 
+Exemplary user - login: admin     password: Admin123
+
 Home screen:
 1) open XML file
 2) save XML file
