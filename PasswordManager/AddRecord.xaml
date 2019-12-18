@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="AddRecord" Height="450" Width="600">
+        Title="Password manager: Add record" WindowStartupLocation="CenterScreen" Height="450" Width="600">
 
     <Grid>
         <Label x:Name="label_serviceName" Content="Service name:" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top"/>
@@ -28,7 +28,7 @@
         <TextBox x:Name="textBox_URL" HorizontalAlignment="Left" Height="23" Margin="200,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
         <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="200,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
         <TextBox x:Name="textBox_password" HorizontalAlignment="Left" Height="23" Margin="200,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
-        <Button x:Name="button_apply" Click="button_apply_Click"  Content="Apply" HorizontalAlignment="Left" Margin="200,371,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
+        <Button x:Name="button_apply" Click="button_apply_Click"  Content="Apply" HorizontalAlignment="Left" Margin="200,371,0,0" VerticalAlignment="Top" Width="80" Height="30" IsDefault="True"/>
         <Button x:Name="button_cancel" Click="button_cancel_Click" Content="Cancel" HorizontalAlignment="Left" Margin="405,371,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
     </Grid>
 </Window>

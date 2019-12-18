@@ -22,7 +22,7 @@ namespace PasswordManager
         UserList users;
         User user;
 
-        public ShowRecord(UserList users, User user, Record record)    // edit record
+        public ShowRecord(UserList users, User user, Record record)
         {
             this.users = users;
             this.user = user;
@@ -31,7 +31,7 @@ namespace PasswordManager
             textBox_login.Text = record.Login;
             textBox_password.Text = record.Password;
             textBox_URL.Text = record.ServiceURL;
-            textBox_category.Text = record.Category.ToString();
+            comboBox_category.SelectedIndex = (int)record.Category;
         }
 
         private void button_cancel_Click(object sender, RoutedEventArgs e)

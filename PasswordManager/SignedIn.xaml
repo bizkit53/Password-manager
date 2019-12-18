@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="Password Manager" Height="450" Width="600">
+        Title="Password manager" WindowStartupLocation="CenterScreen" Height="450" Width="600">
     <Grid>
-        <DockPanel Grid.ColumnSpan="2">
-            <Menu DockPanel.Dock="Top">
-                <Button x:Name="Logout" Content="Logout" Click="Logout_Click"/>
-            </Menu>
+        <DockPanel HorizontalAlignment="Stretch">
+            <DockPanel DockPanel.Dock="Top" Background="#FFDDDDDD" >
+                <Button x:Name="button_logout" Content="Logout" Click="Logout_Click" DockPanel.Dock="Top" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold"/>
+            </DockPanel>
+            <TextBox x:Name="textBox_user" IsEnabled="False" DockPanel.Dock="Right"  BorderBrush="Transparent" Background="Transparent" Margin="0,-22,0,0" FontWeight="Bold" FontSize="16"/>
             <StackPanel></StackPanel>
         </DockPanel>
-        <ListBox x:Name="listBox_records" HorizontalAlignment="Left" Height="397" Margin="140,22,0,0" VerticalAlignment="Top" Width="452"/>
-        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <ListBox x:Name="listBox_records" HorizontalAlignment="Stretch" Margin="140,20,0,0" VerticalAlignment="Stretch"  Background="#FFFBFBE0"/>
+        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="75" IsDefault="True"/>
         <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button_edit" Click="button_edit_Click" Content="Edit" HorizontalAlignment="Left" Margin="30,280,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="30,330,0,0" VerticalAlignment="Top" Width="75"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="Password Manager" Height="450" Width="600">
+        Title="Password Manager" WindowStartupLocation="CenterScreen" Height="450" Width="600" >
     <Grid>
         <DockPanel Grid.ColumnSpan="2">
             <Menu DockPanel.Dock="Top">
@@ -17,13 +17,14 @@
             </Menu>
             <StackPanel></StackPanel>
         </DockPanel>
-        
-        <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="215,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
-        <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Height="23" Margin="215,176,0,0" VerticalAlignment="Top" Width="300"/>
-        <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="88,89,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="88,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,-0.852"/>
-        <Button x:Name="button_signIn" Click="button_signIn_Click" Content="Sign in" HorizontalAlignment="Left" Margin="215,273,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button x:Name="button_register" Click="button_register_Click" Content="Register" HorizontalAlignment="Left" Margin="415,273,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        
+
+        <Grid Width="600"  Height="450" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="215,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+            <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Height="23" Margin="215,176,0,0" VerticalAlignment="Top" Width="300"/>
+            <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="88,89,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="88,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,-0.852"/>
+            <Button x:Name="button_signIn" Click="button_signIn_Click" Content="Sign in" HorizontalAlignment="Left" Margin="215,273,0,0" VerticalAlignment="Top" Width="100" Height="40" IsDefault="True"/>
+            <Button x:Name="button_register" Click="button_register_Click" Content="Register" HorizontalAlignment="Left" Margin="415,273,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
+        </Grid>
     </Grid>
 </Window>

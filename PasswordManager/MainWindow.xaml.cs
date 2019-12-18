@@ -26,7 +26,6 @@ namespace PasswordManager
         public MainWindow(UserList users)
         {
             this.users = users;
-
             InitializeComponent();
         }
 

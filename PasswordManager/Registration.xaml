@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="Registration" Height="450" Width="419.288">
+        Title="Password manager: Registration" WindowStartupLocation="CenterScreen" Height="450" Width="419.288">
     <Grid>
-        <Label x:Name="label_registration" Content="Registration" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_registration" Content="Add new user" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="14,109,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="14,172,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_repeatPassword" Content="Repeat password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,231,0,0"/>

@@ -32,6 +32,7 @@ namespace PasswordManager
             InitializeComponent();
             list = new ObservableCollection<Record>(user.Records);
             listBox_records.ItemsSource = list;
+            textBox_user.Text = "User: " + user.Login;
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
