@@ -106,5 +106,22 @@ namespace PasswordManager
                 listBox_records.Items.Refresh();
             }
         }
+
+        private void button_copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox_records.SelectedItem != null)
+            {
+                MessageBoxResult result = MessageBox.Show("Do you want to copy " + listBox_records.SelectedItem.ToString(), "Copy record", MessageBoxButton.YesNo);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    Record record = (Record)listBox_records.SelectedItem;
+                    Record newRecord = (Record)record.Clone();
+                    user.AddRecord(newRecord);
+                    list = new ObservableCollection<Record>(user.Records);
+                    listBox_records.ItemsSource = list;
+                }
+            }
+        }
     }
 }

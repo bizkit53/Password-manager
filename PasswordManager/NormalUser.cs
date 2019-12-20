@@ -30,6 +30,12 @@ namespace PasswordManager
             SortRecords();
         }
 
+        public void AddRecord(Record record)
+        {
+            records.Add(record);
+            SortRecords();
+        }
+
         public void DeleteRecord(Record record)
         {
             records.Remove(record);

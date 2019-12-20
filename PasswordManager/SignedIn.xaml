@@ -16,10 +16,11 @@
         </DockPanel>
 
         <ListBox x:Name="listBox_records" HorizontalAlignment="Stretch" Margin="140,20,0,0" VerticalAlignment="Stretch"  Background="#FFFBFBE0"/>
-        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="75" IsDefault="True"/>
-        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,200,0,0" VerticalAlignment="Top" Width="75" IsDefault="True"/>
+        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,240,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button_edit" Click="button_edit_Click" Content="Edit" HorizontalAlignment="Left" Margin="30,280,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="30,330,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_copy" Click="button_copy_Click" Content="Copy" HorizontalAlignment="Left" Margin="30,320,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="30,360,0,0" VerticalAlignment="Top" Width="75"/>
 
         <ComboBox x:Name="comboBox_category" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="119" >
             <ComboBoxItem x:Name="None">None</ComboBoxItem>
