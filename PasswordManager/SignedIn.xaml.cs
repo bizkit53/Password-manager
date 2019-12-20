@@ -90,20 +90,14 @@ namespace PasswordManager
             {
                 list.Clear();
                 foreach (Record record in user.Records)
-                {
                     if (comboBox_category.SelectedIndex == (int)record.Category)
                         list.Add(record);
-                }
-                listBox_records.Items.Refresh();
             }
             else
             {
                 list.Clear();
                 foreach (Record record in user.Records)
-                {
                     list.Add(record);
-                }
-                listBox_records.Items.Refresh();
             }
         }
 

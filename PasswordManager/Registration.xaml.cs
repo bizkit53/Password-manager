@@ -22,17 +22,26 @@ namespace PasswordManager
     public partial class Registration : Window
     {
         UserList users;
+        User newUser;
+        AdminUser loggedInAdmin;
 
-        public Registration(UserList users)
+        public Registration(UserList users, User user)
         {
             this.users = users;
+            this.newUser = user;
+            InitializeComponent();
+        }
+
+        public Registration(UserList users, User user, AdminUser admin)
+        {
+            this.users = users;
+            this.newUser = user;
+            this.loggedInAdmin = admin;
             InitializeComponent();
         }
 
         private void button_register_Click(object sender, RoutedEventArgs e)
         {
-            NormalUser newUser = new NormalUser();
-
             if (users.CheckIfLoginExist(textBox_login.Text) == false)
             {
                 newUser.Login = textBox_login.Text;
@@ -57,8 +66,16 @@ namespace PasswordManager
 
         private void button_cancel_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow(users);
-            main.Show();
+            if (loggedInAdmin != null)
+            {
+                AdminPanel panel = new AdminPanel(users, loggedInAdmin);
+                panel.Show();
+            }
+            else
+            {
+                MainWindow main = new MainWindow(users);
+                main.Show();
+            }
             this.Close();
         }
     }

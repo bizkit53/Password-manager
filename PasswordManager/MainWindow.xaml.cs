@@ -62,7 +62,8 @@ namespace PasswordManager
 
         private void button_register_Click(object sender, RoutedEventArgs e)
         {
-            Registration registration = new Registration(users);
+            NormalUser normalUser = new NormalUser();
+            Registration registration = new Registration(users, normalUser);
             registration.Show();
             this.Close();
         }

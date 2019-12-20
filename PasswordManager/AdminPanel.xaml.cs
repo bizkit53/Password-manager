@@ -31,7 +31,7 @@ namespace PasswordManager
             InitializeComponent();
             list = new ObservableCollection<User>(users.Users);
             listBox_users.ItemsSource = list;
-            textBox_user.Text = "User: " + user.Login;
+            textBox_user.Text = "(Admin)User: " + user.Login;
         }
 
         private void button_logout_Click(object sender, RoutedEventArgs e)
@@ -43,17 +43,44 @@ namespace PasswordManager
 
         private void button_show_Click(object sender, RoutedEventArgs e)
         {
-
+            if (listBox_users.SelectedItem != null)
+            {
+                User userToShow = (User)listBox_users.SelectedItem;
+                UserWindow window = new UserWindow(users, user, userToShow);
+                window.label_show.Visibility = Visibility.Visible;
+                window.label_edit.Visibility = Visibility.Hidden;
+                window.textBox_login.Text = userToShow.Login;
+                window.textBox_password.Text = userToShow.Password;
+                window.textBox_password.IsEnabled = false;
+                window.button_cancel.IsDefault = true;
+                window.Show();
+                this.Close();
+            }
         }
 
         private void button_addAdmin_Click(object sender, RoutedEventArgs e)
         {
-
+            AdminUser adminUser = new AdminUser();
+            Registration registration = new Registration(users, adminUser, user);
+            registration.Show();
+            this.Close();
         }
 
         private void button_edit_Click(object sender, RoutedEventArgs e)
         {
-
+            if (listBox_users.SelectedItem != null)
+            {
+                User userToEdit = (User)listBox_users.SelectedItem;
+                UserWindow window = new UserWindow(users, user, userToEdit);
+                window.label_show.Visibility = Visibility.Hidden;
+                window.label_edit.Visibility = Visibility.Visible;
+                window.textBox_login.Text = userToEdit.Login;
+                window.textBox_password.Text = userToEdit.Password;
+                window.button_apply.Visibility = Visibility.Visible;
+                window.button_apply.IsDefault = true;
+                window.Show();
+                this.Close();
+            }
         }
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
