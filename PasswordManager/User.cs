@@ -57,5 +57,10 @@ namespace PasswordManager
 
         public string Login { get => login; set => login = value; }
         public string Password { get => password; set => password = setPassword(value); }
+
+        public override string ToString()
+        {
+            return this.Login;
+        }
     }
 }

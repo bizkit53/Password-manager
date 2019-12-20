@@ -29,18 +29,16 @@ namespace PasswordManager
             this.users = users;
             this.user = user;
             InitializeComponent();
-            foreach (User User in users.Users)
-            {
-                if (!(user is AdminUser)) 
-                    list.Add(User);
-            }
+            list = new ObservableCollection<User>(users.Users);
             listBox_users.ItemsSource = list;
             textBox_user.Text = "User: " + user.Login;
         }
 
         private void button_logout_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow main = new MainWindow(users);
+            main.Show();
+            this.Close();
         }
 
         private void button_show_Click(object sender, RoutedEventArgs e)
@@ -48,7 +46,7 @@ namespace PasswordManager
 
         }
 
-        private void button_add_Click(object sender, RoutedEventArgs e)
+        private void button_addAdmin_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -60,7 +58,20 @@ namespace PasswordManager
 
         private void button_delete_Click(object sender, RoutedEventArgs e)
         {
+            if (listBox_users.SelectedItem == this.user)
+                MessageBox.Show("You can't delete active admin user!");
+            else
+                if (listBox_users.SelectedItem != null)
+                {
+                    MessageBoxResult result = MessageBox.Show("Do you really want to delete " + listBox_users.SelectedItem.ToString(), "Delete user", MessageBoxButton.YesNo);
 
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        User userRemove = (User)listBox_users.SelectedItem;
+                        users.DeleteUser(userRemove);
+                        list.Remove(userRemove);
+                    }
+                }
         }
     }
 }

@@ -25,6 +25,13 @@ namespace PasswordManager
            if (File.Exists(filename))
                 users = UserList.ReadXML(filename);
 
+            foreach (User user in users.Users)
+                if (user is NormalUser)
+                {
+                    NormalUser temp = (NormalUser)user;
+                    temp.SortRecords();
+                }
+
             MainWindow window = new MainWindow(users);
             application.Run(window);
         }

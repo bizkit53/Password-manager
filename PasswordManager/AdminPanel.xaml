@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="AdminPanel" WindowStartupLocation="CenterScreen" Height="450" Width="600">
+        Title="Password manager: Admin panel" WindowStartupLocation="CenterScreen" Height="450" Width="600">
     <Grid>
         <DockPanel HorizontalAlignment="Stretch">
             <DockPanel DockPanel.Dock="Top" Background="#FFDDDDDD" >
@@ -17,7 +17,7 @@
 
         <ListBox x:Name="listBox_users" HorizontalAlignment="Stretch" Margin="140,20,0,0" VerticalAlignment="Stretch"  Background="#FFFBFBE0"/>
         <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="75" IsDefault="True"/>
-        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_addAdmin" Click="button_addAdmin_Click"  Content="Add admin" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button_edit" Click="button_edit_Click" Content="Edit" HorizontalAlignment="Left" Margin="30,280,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="30,330,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>

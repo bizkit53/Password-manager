@@ -9,7 +9,7 @@ namespace PasswordManager
     [Serializable] 
     public enum categories { None, Business, Email, Finance, Games, Health, Productivity, Shopping, Social }
 
-    public class Record
+    public class Record : IComparable<Record>
     {
         private string serviceName;
         private string login;
@@ -52,5 +52,10 @@ namespace PasswordManager
         public string Password { get => password; set => password = value; }
         public string ServiceURL { get => serviceURL; set => serviceURL = value; }
         public categories Category { get => category; set => category = value; }
+
+        public int CompareTo(Record record)
+        {
+            return String.Compare(ServiceName, record.ServiceName);
+        }
     }
 }
