@@ -9,24 +9,21 @@ using System.Windows;
 namespace PasswordManager
 {
     [Serializable]
-    public class User
+    public abstract class User
     {
         private string login;
         private string password;
-        private List<Record> records;
 
         public User()
         {
             this.login = "";
             this.password = "";
-            this.records = new List<Record>();
         }
 
-        public User(string login, string password, List<Record> records)
+        public User(string login, string password)
         {
             this.login = login;
             this.password = password;
-            this.records = records;
         }
 
         private string setPassword(string password)
@@ -58,19 +55,7 @@ namespace PasswordManager
                 return false;
         }
 
-        public void AddRecord(string serviceName, string login, string password, string serviceURL, categories category)
-        {
-            Record newRecord = new Record(serviceName, login, password, serviceURL, category);
-            records.Add(newRecord);
-        }
-
-        public void DeleteRecord(Record record)
-        {
-            records.Remove(record);
-        }
-
         public string Login { get => login; set => login = value; }
         public string Password { get => password; set => password = setPassword(value); }
-        public List<Record> Records { get => records; set => records = value; }
     }
 }

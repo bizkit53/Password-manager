@@ -20,10 +20,10 @@ namespace PasswordManager
     public partial class EditRecord : Window
     {
         UserList users;
-        User user;
+        NormalUser user;
         Record record;
 
-        public EditRecord(UserList users, User user, Record record)
+        public EditRecord(UserList users, NormalUser user, Record record)
         {
             this.users = users;
             this.user = user;

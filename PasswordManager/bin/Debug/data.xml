@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UserList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Users>
-    <User>
+    <User xsi:type="AdminUser">
       <Login>admin</Login>
       <Password>Admin123</Password>
+    </User>
+    <User xsi:type="NormalUser">
+      <Login>user</Login>
+      <Password>User1234</Password>
       <Records>
         <Record>
           <ServiceName>OneTwo</ServiceName>

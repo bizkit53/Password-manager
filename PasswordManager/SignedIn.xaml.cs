@@ -22,10 +22,10 @@ namespace PasswordManager
     public partial class SignedIn : Window
     {
         UserList users;
-        User user;
+        NormalUser user;
         ObservableCollection<Record> list;
 
-        public SignedIn(UserList users, User user)
+        public SignedIn(UserList users, NormalUser user)
         {
             this.users = users;
             this.user = user;

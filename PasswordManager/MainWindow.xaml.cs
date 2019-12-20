@@ -31,18 +31,33 @@ namespace PasswordManager
 
         private void button_signIn_Click(object sender, RoutedEventArgs e)
         {
+            bool userExists = false;
+
             foreach (User user in users.Users)
                 if (textBox_login.Text == user.Login)
+                {
+                    userExists = true;
                     if (passwordBox_password.Password.ToString() == user.Password)
                     {
-                        SignedIn signedIn = new SignedIn(users, user);
-                        signedIn.Show();
-                        this.Close();
+                        if (user is AdminUser)
+                        {
+                            AdminPanel adminPanel = new AdminPanel(users, (AdminUser)user);
+                            adminPanel.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            SignedIn signedIn = new SignedIn(users, (NormalUser)user);
+                            signedIn.Show();
+                            this.Close();
+                        }
                     }
                     else
                         MessageBox.Show("Wrong password.");
-                else
-                    MessageBox.Show("User not exists.");
+                }
+            
+            if(userExists == false)
+                MessageBox.Show("User not exists.");
         }
 
         private void button_register_Click(object sender, RoutedEventArgs e)

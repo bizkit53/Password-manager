@@ -31,7 +31,7 @@ namespace PasswordManager
 
         private void button_register_Click(object sender, RoutedEventArgs e)
         {
-            User newUser = new User();
+            NormalUser newUser = new NormalUser();
 
             if (users.CheckIfLoginExist(textBox_login.Text) == false)
             {

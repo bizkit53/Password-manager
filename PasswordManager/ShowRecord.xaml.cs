@@ -20,9 +20,9 @@ namespace PasswordManager
     public partial class ShowRecord : Window
     {
         UserList users;
-        User user;
+        NormalUser user;
 
-        public ShowRecord(UserList users, User user, Record record)
+        public ShowRecord(UserList users, NormalUser user, Record record)
         {
             this.users = users;
             this.user = user;

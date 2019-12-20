@@ -9,6 +9,8 @@ using System.Xml.Serialization;
 namespace PasswordManager
 {
     [Serializable]
+    [XmlInclude(typeof(AdminUser))]
+    [XmlInclude(typeof(NormalUser))]
     public class UserList
     {
         private List<User> users;
