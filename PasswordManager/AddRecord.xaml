@@ -7,28 +7,30 @@
         mc:Ignorable="d"
         Title="Password manager: Add record" WindowStartupLocation="CenterScreen" Height="450" Width="600">
 
-    <Grid>
-        <Label x:Name="label_serviceName" Content="Service name:" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_category" Content="Category:" HorizontalAlignment="Left" Margin="40,117,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_URL" Content="URL: (optional)" HorizontalAlignment="Left" Margin="40,180,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="40,245,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,314,0,0"/>
-        <TextBox x:Name="textBox_serviceName" HorizontalAlignment="Left" Height="23" Margin="200,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
-        <ComboBox x:Name="comboBox_category" HorizontalAlignment="Left" Margin="200,121,0,0" VerticalAlignment="Top" Width="285" >
-            <ComboBoxItem x:Name="None">None</ComboBoxItem>
-            <ComboBoxItem x:Name="Business">Business</ComboBoxItem>
-            <ComboBoxItem x:Name="Email">Email</ComboBoxItem>
-            <ComboBoxItem x:Name="Finance">Finance</ComboBoxItem>
-            <ComboBoxItem x:Name="Games">Games</ComboBoxItem>
-            <ComboBoxItem x:Name="Health">Health</ComboBoxItem>
-            <ComboBoxItem x:Name="Productivity">Productivity</ComboBoxItem>
-            <ComboBoxItem x:Name="Shopping">Shopping</ComboBoxItem>
-            <ComboBoxItem x:Name="Social">Social</ComboBoxItem>
-        </ComboBox>
-        <TextBox x:Name="textBox_URL" HorizontalAlignment="Left" Height="23" Margin="200,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
-        <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="200,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
-        <TextBox x:Name="textBox_password" HorizontalAlignment="Left" Height="23" Margin="200,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
-        <Button x:Name="button_apply" Click="button_apply_Click"  Content="Apply" HorizontalAlignment="Left" Margin="200,371,0,0" VerticalAlignment="Top" Width="80" Height="30" IsDefault="True"/>
-        <Button x:Name="button_cancel" Click="button_cancel_Click" Content="Cancel" HorizontalAlignment="Left" Margin="405,371,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
+    <Grid Background="#FFFBFBE0">
+        <Grid Height="450" Width="600" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label x:Name="label_serviceName" Content="Service name:" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_category" Content="Category:" HorizontalAlignment="Left" Margin="40,117,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_URL" Content="URL: (optional)" HorizontalAlignment="Left" Margin="40,180,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="40,245,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,314,0,0"/>
+            <TextBox x:Name="textBox_serviceName" HorizontalAlignment="Left" Height="23" Margin="200,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
+            <ComboBox x:Name="comboBox_category" HorizontalAlignment="Left" Margin="200,121,0,0" VerticalAlignment="Top" Width="285" >
+                <ComboBoxItem x:Name="None">None</ComboBoxItem>
+                <ComboBoxItem x:Name="Business">Business</ComboBoxItem>
+                <ComboBoxItem x:Name="Email">Email</ComboBoxItem>
+                <ComboBoxItem x:Name="Finance">Finance</ComboBoxItem>
+                <ComboBoxItem x:Name="Games">Games</ComboBoxItem>
+                <ComboBoxItem x:Name="Health">Health</ComboBoxItem>
+                <ComboBoxItem x:Name="Productivity">Productivity</ComboBoxItem>
+                <ComboBoxItem x:Name="Shopping">Shopping</ComboBoxItem>
+                <ComboBoxItem x:Name="Social">Social</ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="textBox_URL" HorizontalAlignment="Left" Height="23" Margin="200,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
+            <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="200,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
+            <TextBox x:Name="textBox_password" HorizontalAlignment="Left" Height="23" Margin="200,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
+            <Button x:Name="button_apply" Click="button_apply_Click"  Content="Apply" HorizontalAlignment="Left" Margin="200,371,0,0" VerticalAlignment="Top" Width="80" Height="30" IsDefault="True" Background="#FF94EA9C"/>
+            <Button x:Name="button_cancel" Click="button_cancel_Click" Content="Cancel" HorizontalAlignment="Left" Margin="405,371,0,0" VerticalAlignment="Top" Width="80" Height="30" Background="#FF94EA9C"/>
+        </Grid>
     </Grid>
 </Window>

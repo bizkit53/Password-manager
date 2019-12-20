@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="Password manager: Registration" WindowStartupLocation="CenterScreen" Height="450" Width="419.288">
-    <Grid>
-        <Label x:Name="label_registration" Content="Add new user" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="14,109,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="14,172,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_repeatPassword" Content="Repeat password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,231,0,0"/>
-        <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="136,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Margin="136,172,0,0" VerticalAlignment="Top" Width="179"/>
-        <PasswordBox x:Name="passwordBox_repeatPassword" HorizontalAlignment="Left" Margin="136,239,0,0" VerticalAlignment="Top" Width="179"/>
-        <Button x:Name="button_register" Click="button_register_Click" Content="Register" HorizontalAlignment="Left" Margin="98,345,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_cancel" Click="button_cancel_Click" Content="Cancel" HorizontalAlignment="Left" Margin="240,345,0,0" VerticalAlignment="Top" Width="75"/>
-
-
+        Title="Password manager: Registration" WindowStartupLocation="CenterScreen" Height="450" Width="400">
+    <Grid Background="#FFFBFBE0">
+        <Grid Height="450" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label x:Name="label_registration" Content="Add new user" Margin="150,74,0,0" VerticalAlignment="Top" FontWeight="Bold" HorizontalAlignment="Left" Width="87"/>
+            <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="20,200,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_repeatPassword" Content="Repeat password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,250,0,0"/>
+            <TextBox x:Name="textBox_login" HorizontalAlignment="Left"  Margin="140,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="26"/>
+            <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Margin="140,200,0,0" VerticalAlignment="Top" Width="230" Height="26"/>
+            <PasswordBox x:Name="passwordBox_repeatPassword" HorizontalAlignment="Left" Margin="140,250,0,0" VerticalAlignment="Top" Width="230" Height="26"/>
+            <Button x:Name="button_register" Click="button_register_Click" Content="Register" Margin="75,345,0,0" VerticalAlignment="Top" Height="30" IsDefault="True" HorizontalAlignment="Left" Width="80" Background="#FF94EA9C"/>
+            <Button x:Name="button_cancel" Click="button_cancel_Click" Content="Cancel" Margin="237,345,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="80" Background="#FF94EA9C"/>
+        </Grid>
     </Grid>
 </Window>

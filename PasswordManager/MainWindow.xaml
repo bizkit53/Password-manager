@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManager"
         mc:Ignorable="d"
-        Title="Password Manager" WindowStartupLocation="CenterScreen" Height="450" Width="600" >
-    <Grid>
+        Title="Password Manager" WindowStartupLocation="CenterScreen" Height="450" Width="400" >
+    <Grid Background="#FFFBFBE0">
         <DockPanel Grid.ColumnSpan="2">
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
@@ -18,13 +18,14 @@
             <StackPanel></StackPanel>
         </DockPanel>
 
-        <Grid Width="600"  Height="450" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Height="23" Margin="215,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
-            <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Height="23" Margin="215,176,0,0" VerticalAlignment="Top" Width="300"/>
-            <Label x:Name="label_login" Content="Login" HorizontalAlignment="Left" Margin="88,89,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="88,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,-0.852"/>
-            <Button x:Name="button_signIn" Click="button_signIn_Click" Content="Sign in" HorizontalAlignment="Left" Margin="215,273,0,0" VerticalAlignment="Top" Width="100" Height="40" IsDefault="True"/>
-            <Button x:Name="button_register" Click="button_register_Click" Content="Register" HorizontalAlignment="Left" Margin="415,273,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
+        <Grid Height="450" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label x:Name="label_welcome" Content="Welcome in password manager" Margin="107,74,0,0" VerticalAlignment="Top" FontWeight="Bold" HorizontalAlignment="Left" Width="186"/>
+            <TextBox x:Name="textBox_login" HorizontalAlignment="Left" Margin="75,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="26"/>
+            <PasswordBox x:Name="passwordBox_password" HorizontalAlignment="Left" Margin="75,284,0,0" VerticalAlignment="Top" Width="250" Height="26"/>
+            <Label x:Name="label_login" Content="Login" Margin="181,131,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="39"/>
+            <Label x:Name="label_password" Content="Password" Margin="170,233,0,0" HorizontalAlignment="Left" Width="60" Height="26" VerticalAlignment="Top"/>
+            <Button x:Name="button_signIn" Click="button_signIn_Click" Content="Sign in" Margin="75,345,237,0" VerticalAlignment="Top" Height="30" IsDefault="True" Background="#FF94EA9C"/>
+            <Button x:Name="button_register" Click="button_register_Click" Content="Register" Margin="237,345,75,0" VerticalAlignment="Top" Height="30" Background="#FF94EA9C"/>
         </Grid>
     </Grid>
 </Window>

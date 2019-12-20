@@ -9,20 +9,22 @@
     <Grid>
         <DockPanel HorizontalAlignment="Stretch">
             <DockPanel DockPanel.Dock="Top" Background="#FFDDDDDD" >
-                <Button x:Name="button_logout" Content="Logout" Click="Logout_Click" DockPanel.Dock="Top" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold"/>
+                <Button x:Name="button_logout" Content="Logout" Click="button_logout_Click" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="50" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold"/>
             </DockPanel>
-            <TextBox x:Name="textBox_user" IsEnabled="False" DockPanel.Dock="Right"  BorderBrush="Transparent" Background="Transparent" Margin="0,-22,0,0" FontWeight="Bold" FontSize="16"/>
-            <StackPanel></StackPanel>
+            <DockPanel DockPanel.Dock="Right" Background="#FFD1F5F4">
+                <TextBox x:Name="textBox_user" IsEnabled="False" BorderBrush="#FF94EA9C" Background="#FF94EA9C" Margin="0,-22,0,0" FontWeight="Bold" FontSize="16" Height="22" VerticalAlignment="Top" />
+            </DockPanel>
+            <StackPanel Background="#FFD1F5F4"></StackPanel>
         </DockPanel>
 
         <ListBox x:Name="listBox_records" HorizontalAlignment="Stretch" Margin="140,20,0,0" VerticalAlignment="Stretch"  Background="#FFFBFBE0"/>
-        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="30,200,0,0" VerticalAlignment="Top" Width="75" IsDefault="True"/>
-        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="30,240,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_edit" Click="button_edit_Click" Content="Edit" HorizontalAlignment="Left" Margin="30,280,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_copy" Click="button_copy_Click" Content="Copy" HorizontalAlignment="Left" Margin="30,320,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="30,360,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_show" Click="button_show_Click" Content="Show" HorizontalAlignment="Left" Margin="15,204,0,0" VerticalAlignment="Top" Width="111" IsDefault="True" Height="25" Background="#FF94EA9C"/>
+        <Button x:Name="button_add" Click="button_add_Click"  Content="Add" HorizontalAlignment="Left" Margin="15,244,0,0" VerticalAlignment="Top" Width="111" Height="25" Background="#FF94EA9C"/>
+        <Button x:Name="button_edit" Click="button_edit_Click" Content="Edit" HorizontalAlignment="Left" Margin="15,284,0,0" VerticalAlignment="Top" Width="111" Height="25" Background="#FF94EA9C"/>
+        <Button x:Name="button_copy" Click="button_copy_Click" Content="Copy" HorizontalAlignment="Left" Margin="15,324,0,0" VerticalAlignment="Top" Width="111" Height="25" Background="#FF94EA9C"/>
+        <Button x:Name="button_delete" Click="button_delete_Click" Content="Delete" HorizontalAlignment="Left" Margin="15,364,0,0" VerticalAlignment="Top" Background="#FF94EA9C" Width="111" Height="25"/>
 
-        <ComboBox x:Name="comboBox_category" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="119" >
+        <ComboBox x:Name="comboBox_category" HorizontalAlignment="Left" Margin="15,50,0,0" VerticalAlignment="Top" Width="111" Height="25" >
             <ComboBoxItem x:Name="None">None</ComboBoxItem>
             <ComboBoxItem x:Name="Business">Business</ComboBoxItem>
             <ComboBoxItem x:Name="Email">Email</ComboBoxItem>
@@ -34,7 +36,7 @@
             <ComboBoxItem x:Name="Social">Social</ComboBoxItem>
             <ComboBoxItem x:Name="All" Background="GreenYellow">All</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="button_filterCategory" Click="button_filterCategory_Click" Content="Filter category" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="119"/>
+        <Button x:Name="button_filterCategory" Click="button_filterCategory_Click" Content="Filter category" HorizontalAlignment="Left" Margin="15,90,0,0" VerticalAlignment="Top" Width="111" Height="25" Background="#FFEBEBEB" BorderBrush="#FFACACAC"/>
 
     </Grid>
 </Window>
