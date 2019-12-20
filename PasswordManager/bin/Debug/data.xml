@@ -10,18 +10,46 @@
       <Password>User1234</Password>
       <Records>
         <Record>
+          <ServiceName>Black Jack</ServiceName>
+          <Login>simpleDebt</Login>
+          <Password>makeItFast3r</Password>
+          <ServiceURL>bj.com</ServiceURL>
+          <Category>Games</Category>
+        </Record>
+        <Record>
+          <ServiceName>Ebay</ServiceName>
+          <Login>doggy</Login>
+          <Password>BullDog3r</Password>
+          <ServiceURL>ebay.com</ServiceURL>
+          <Category>Shopping</Category>
+        </Record>
+        <Record>
+          <ServiceName>Facebook</ServiceName>
+          <Login>Johny@example.com</Login>
+          <Password>RidersOnTheStorm</Password>
+          <ServiceURL>facebook.com</ServiceURL>
+          <Category>Social</Category>
+        </Record>
+        <Record>
+          <ServiceName>High Jump</ServiceName>
+          <Login>tinyDuck</Login>
+          <Password>Fat9Collector</Password>
+          <ServiceURL>indoorparachuting.com</ServiceURL>
+          <Category>Health</Category>
+        </Record>
+        <Record>
+          <ServiceName>High Traffic</ServiceName>
+          <Login>mosquito</Login>
+          <Password>MrJack03</Password>
+          <ServiceURL />
+          <Category>Games</Category>
+        </Record>
+        <Record>
           <ServiceName>OneTwo</ServiceName>
           <Login>onetwo@three.com</Login>
           <Password>Hello13</Password>
           <ServiceURL>onetwo.com</ServiceURL>
           <Category>Email</Category>
-        </Record>
-        <Record>
-          <ServiceName>Reddit</ServiceName>
-          <Login>snowman</Login>
-          <Password>MadaGaScar75</Password>
-          <ServiceURL>reddit.com</ServiceURL>
-          <Category>Social</Category>
         </Record>
         <Record>
           <ServiceName>ProLife</ServiceName>
@@ -31,9 +59,82 @@
           <Category>Health</Category>
         </Record>
         <Record>
-          <ServiceName>High Traffic</ServiceName>
-          <Login>mosquito</Login>
-          <Password>MrJack03</Password>
+          <ServiceName>Reddit</ServiceName>
+          <Login>snowman</Login>
+          <Password>MadaGaScar75</Password>
+          <ServiceURL>reddit.com</ServiceURL>
+          <Category>Social</Category>
+        </Record>
+        <Record>
+          <ServiceName>SPA</ServiceName>
+          <Login>MonaLisa</Login>
+          <Password>fromIbiza</Password>
+          <ServiceURL />
+          <Category>Health</Category>
+        </Record>
+        <Record>
+          <ServiceName>Stock Market</ServiceName>
+          <Login>mythological</Login>
+          <Password>MasterPiece003</Password>
+          <ServiceURL>stockers.com</ServiceURL>
+          <Category>Business</Category>
+        </Record>
+        <Record>
+          <ServiceName>Twitter</ServiceName>
+          <Login>sondey</Login>
+          <Password>01BlueSky</Password>
+          <ServiceURL>twitter.com</ServiceURL>
+          <Category>Social</Category>
+        </Record>
+      </Records>
+    </User>
+    <User xsi:type="AdminUser">
+      <Login>mosquito</Login>
+      <Password>Mandarin7</Password>
+    </User>
+    <User xsi:type="NormalUser">
+      <Login>brother</Login>
+      <Password>AirTraffic0</Password>
+      <Records>
+        <Record>
+          <ServiceName>Facebook</ServiceName>
+          <Login>fenda</Login>
+          <Password>BookStoring16</Password>
+          <ServiceURL>facebook.com</ServiceURL>
+          <Category>Social</Category>
+        </Record>
+        <Record>
+          <ServiceName>Google</ServiceName>
+          <Login>brother@gmail.com</Login>
+          <Password>M0nitoring</Password>
+          <ServiceURL />
+          <Category>Email</Category>
+        </Record>
+        <Record>
+          <ServiceName>GymNasty</ServiceName>
+          <Login>LightBulb</Login>
+          <Password>Bicycle007</Password>
+          <ServiceURL>gymnasty.com</ServiceURL>
+          <Category>Health</Category>
+        </Record>
+        <Record>
+          <ServiceName>SP Bank</ServiceName>
+          <Login>21093214</Login>
+          <Password>Abc123#@#</Password>
+          <ServiceURL>spbanking.org</ServiceURL>
+          <Category>Finance</Category>
+        </Record>
+        <Record>
+          <ServiceName>The Sims</ServiceName>
+          <Login>worker</Login>
+          <Password>plumbeR3$</Password>
+          <ServiceURL />
+          <Category>Games</Category>
+        </Record>
+        <Record>
+          <ServiceName>Worms</ServiceName>
+          <Login>boomer</Login>
+          <Password>splash</Password>
           <ServiceURL />
           <Category>Games</Category>
         </Record>
