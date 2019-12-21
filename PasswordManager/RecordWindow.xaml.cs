@@ -15,15 +15,15 @@ using System.Windows.Shapes;
 namespace PasswordManager
 {
     /// <summary>
-    /// Interaction logic for EditRecord.xaml
+    /// Interaction logic for RecordWindow.xaml
     /// </summary>
-    public partial class EditRecord : Window
+    public partial class RecordWindow : Window
     {
         UserList users;
         NormalUser user;
         Record record;
 
-        public EditRecord(UserList users, NormalUser user, Record record)
+        public RecordWindow(UserList users, NormalUser user, Record record)
         {
             this.users = users;
             this.user = user;
@@ -34,6 +34,13 @@ namespace PasswordManager
             textBox_password.Text = record.Password;
             textBox_URL.Text = record.ServiceURL;
             comboBox_category.SelectedIndex = (int)record.Category;
+        }
+
+        public RecordWindow(UserList users, NormalUser user)
+        {
+            this.users = users;
+            this.user = user;
+            InitializeComponent();
         }
 
         private void button_apply_Click(object sender, RoutedEventArgs e)
@@ -60,6 +67,20 @@ namespace PasswordManager
             SignedIn signedIn = new SignedIn(users, user);
             signedIn.Show();
             this.Close();
+        }
+
+        private void button_add_Click(object sender, RoutedEventArgs e)
+        {
+            if (textBox_serviceName.Text != "" && textBox_login.Text != "" && textBox_password.Text != "" && comboBox_category.SelectedItem != null)
+            {
+                user.AddRecord(textBox_serviceName.Text, textBox_login.Text, textBox_password.Text, textBox_URL.Text, (categories)comboBox_category.SelectedIndex);
+                MessageBox.Show("Record successfully added.");
+                SignedIn signedIn = new SignedIn(users, user);
+                signedIn.Show();
+                this.Close();
+            }
+            else
+                MessageBox.Show("Not enough information.");
         }
     }
 }

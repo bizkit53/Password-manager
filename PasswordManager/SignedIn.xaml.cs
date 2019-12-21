@@ -44,7 +44,10 @@ namespace PasswordManager
 
         private void button_add_Click(object sender, RoutedEventArgs e)
         {
-            AddRecord add = new AddRecord(users, user);
+            RecordWindow add = new RecordWindow(users, user);
+            add.Title = "Password manager: Add record";
+            add.button_apply.Visibility = Visibility.Hidden;
+            add.button_add.IsDefault = true;
             add.Show();
             this.Close();
         }
@@ -68,7 +71,10 @@ namespace PasswordManager
         {
             if (listBox_records.SelectedItem != null)
             {
-                EditRecord edit = new EditRecord(users, user, (Record)listBox_records.SelectedItem);
+                RecordWindow edit = new RecordWindow(users, user, (Record)listBox_records.SelectedItem);
+                edit.Title = "Password manager: Edit record";
+                edit.button_add.Visibility = Visibility.Hidden;
+                edit.button_apply.IsDefault = true;
                 edit.Show();
                 this.Close();
             }
@@ -78,8 +84,17 @@ namespace PasswordManager
         {
             if (listBox_records.SelectedItem != null)
             {
-                ShowRecord edit = new ShowRecord(users, user, (Record)listBox_records.SelectedItem);
-                edit.Show();
+                RecordWindow show = new RecordWindow(users, user, (Record)listBox_records.SelectedItem);
+                show.Title = "Password manager: Show record";
+                show.textBox_serviceName.IsEnabled = false;
+                show.textBox_login.IsEnabled = false;
+                show.textBox_password.IsEnabled = false;
+                show.textBox_URL.IsEnabled = false;
+                show.comboBox_category.IsEnabled = false;
+                show.button_apply.Visibility = Visibility.Hidden;
+                show.button_add.Visibility = Visibility.Hidden;
+                show.button_cancel.IsDefault = true;
+                show.Show();
                 this.Close();
             }
         }

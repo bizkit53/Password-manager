@@ -47,6 +47,7 @@ namespace PasswordManager
             {
                 User userToShow = (User)listBox_users.SelectedItem;
                 UserWindow window = new UserWindow(users, user, userToShow);
+                window.Title = "Password manager: User details";
                 window.label_show.Visibility = Visibility.Visible;
                 window.label_edit.Visibility = Visibility.Hidden;
                 window.textBox_login.Text = userToShow.Login;
@@ -62,6 +63,9 @@ namespace PasswordManager
         {
             AdminUser adminUser = new AdminUser();
             Registration registration = new Registration(users, adminUser, user);
+            registration.Title = "Password manager: Admin registration";
+            registration.label_registration.Content = "Add new admin";
+            registration.label_registration.Width = 100;
             registration.Show();
             this.Close();
         }
@@ -72,6 +76,7 @@ namespace PasswordManager
             {
                 User userToEdit = (User)listBox_users.SelectedItem;
                 UserWindow window = new UserWindow(users, user, userToEdit);
+                window.Title = "Password manager: Edit user";
                 window.label_show.Visibility = Visibility.Hidden;
                 window.label_edit.Visibility = Visibility.Visible;
                 window.textBox_login.Text = userToEdit.Login;

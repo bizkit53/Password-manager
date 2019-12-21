@@ -58,13 +58,16 @@ namespace PasswordManager
             {
                 users.AddUser(newUser);
                 MessageBox.Show("Registration successful!");
-                MainWindow main = new MainWindow(users);
-                main.Show();
-                this.Close();
+                openPreviousWindow();
             }
         }
 
         private void button_cancel_Click(object sender, RoutedEventArgs e)
+        {
+            openPreviousWindow();
+        }
+
+        private void openPreviousWindow()
         {
             if (loggedInAdmin != null)
             {
